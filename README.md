@@ -41,7 +41,7 @@ The `bootstrap.sh`:
 - Configures istio operator to create the istio system control plane components
 - Configures istio operator to create both the public and internal ingresses
 
-`Arg 1`: Path where the istio helm chart is located. If the folder doesn't exist then a git clone is performed in the [istio github repo](https://github.com/istio/istio). As of this writting, [there isn't an official helm chart for the istio operator](https://istio.io/latest/docs/setup/install/operator/#deploy-the-istio-operator).
+`Arg 1`: Path where the istio helm chart is located. If the folder doesn't exist then a git clone of [istio github repo](https://github.com/istio/istio) is done. As of this writting, [there isn't an official helm chart for the istio operator](https://istio.io/latest/docs/setup/install/operator/#deploy-the-istio-operator).
 
 `Arg 2`: Path where all the configs for the istio operator are located.
 
