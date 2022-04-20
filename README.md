@@ -23,7 +23,19 @@ To run this repo `bootstrap.sh` script, the following CLI tools need to be insta
 
 ### Setup Infra
 
-The infra code is inside the `terraform` folder. 
+The infra code is inside the `terraform` folder.
+
+If you want to use the default values for terraform, here's the `terraform.tfvars`:
+
+```terraform
+location = "westeurope"
+resource_group_name = "playground-aks-istio"
+cluster_name = "aks-istio"
+private_cluster_enabled = false
+kubernetes_version = "1.23.3"
+node_count = 1
+vm_size = "Standard_B2ms"
+```
 
 First login with your az login account:
 ```sh
