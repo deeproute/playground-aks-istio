@@ -57,6 +57,7 @@ kubectl apply -f app/.
 ## References
 
 - [Deploying Multiple Ingress Gateways](https://www.youtube.com/watch?v=QIkryA8HnQ0&list=PLm51GPKRAmTnMzTf9N95w_yXo7izg80Jc&index=13&t=1530s&ab_channel=Tetrate)
+- [getistio.io - Multiple Gateways](https://getistio.io/istio-in-practice/multiple-ingress-gateways)
 - [Istio Operator Specification](https://istio.io/latest/docs/reference/config/istio.operator.v1alpha1)
 - [Azure LB Annotations list](https://kubernetes-sigs.github.io/cloud-provider-azure/topics/loadbalancer/#loadbalancer-annotations)
 - [How to configure Azure App Gateway in Istio](https://stackoverflow.com/questions/60113682/how-to-configure-azure-app-gateway-in-istio)
