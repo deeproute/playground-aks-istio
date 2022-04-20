@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: nginx-1
+  namespace: test-app
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - istio-ingress-public/gateway # Syntax: <gateway namespace>/<gateway name>
+  - istio-ingress-internal/gateway # Also allow traffic comming from the internal gateway
+  http:
+  - route:
+    - destination:
+        host: nginx
+        port:
+          number: 80

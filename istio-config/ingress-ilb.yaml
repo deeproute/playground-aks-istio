@@ -1,0 +1,17 @@
+apiVersion: install.istio.io/v1alpha1
+kind: IstioOperator
+metadata:
+  namespace: istio-system
+  name: ingress-ilb-config
+spec:
+  profile: empty # Do not install CRDs or the control plane - https://istio.io/latest/docs/setup/additional-setup/config-profiles
+  components:
+    ingressGateways:
+      - name: ingressgateway-internal
+        enabled: true
+        namespace: istio-ingress-internal
+        label:
+          istio: ingressgateway-internal
+        k8s:
+          serviceAnnotations:
+            service.beta.kubernetes.io/azure-load-balancer-internal: "true"
