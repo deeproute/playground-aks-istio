@@ -57,6 +57,8 @@ function main()
     kubectl create ns istio-system
     kubectl apply -f "${istio_config}/istio-base-install.yaml"
     
+    sleep 10s # wait for the istio-system to stabilize
+
     # Create the Ingresses
     # Its a best security practice to create the ingress gateways outside the istio-system namespace
     # https://istio.io/latest/docs/setup/additional-setup/gateway/#deploying-a-gateway
